@@ -34,7 +34,7 @@ class JobAnalyserUI:
         st.subheader("Strengths")    
         if result["strengths"]:
             for s in result["strengths"]:
-                st.write(f"-{s}  ({result["skill_scores"][s]}/10)")
+                st.write(f"-{s}  ({result['skill_scores'][s]}/10)")
         else:
             st.write("No strong skills in the resume")
         
@@ -42,7 +42,7 @@ class JobAnalyserUI:
         st.subheader("Areas of Improvement")    
         if result["missing"]:
             for s in result["missing"]:
-                st.write(f"-{s}  ({result["skill_scores"][s]}/10)")
+                st.write(f"-{s}  ({result['skill_scores'][s]}/10)")
         else:
             st.write("No major skill gap found")              
                 
